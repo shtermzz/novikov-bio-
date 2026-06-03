@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(145deg, #0a0a0c 0%, #1a0b14 50%, #0d0210 100%);
+    font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+/* основний блок — ніби «вікно» */
+.card {
+    max-width: 1000px;
+    width: 100%;
+    background: rgba(10, 5, 12, 0.65);
+    backdrop-filter: blur(12px);
+    border-radius: 28px;
+    border: 1px solid rgba(255, 80, 160, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 80, 160, 0.1);
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+/* хедер — мінімальний */
+.header {
+    padding: 18px 24px;
+    background: rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgba(255, 80, 160, 0.4);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.25rem;
+    letter-spacing: -0.3px;
+    background: linear-gradient(135deg, #ff99cc, #ff66bb);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.status {
+    font-size: 0.7rem;
+    color: #ff88bb;
+    background: rgba(255, 80, 160, 0.12);
+    padding: 4px 10px;
+    border-radius: 60px;
+    font-family: monospace;
+}
+
+.status span {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background: #ff66bb;
+    border-radius: 50%;
+    margin-right: 6px;
+    box-shadow: 0 0 5px #ff80c0;
+    animation: pulse 1.4s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; background: #ff99dd; }
+}
+
+/* СТИЛЬ ВКЛАДОК (TABS) */
+.tabs {
+    display: flex;
+    gap: 6px;
+    padding: 16px 24px 0 24px;
+    background: rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgba(255, 100, 170, 0.2);
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-family: inherit;
+    color: #ccb3cc;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tab-btn i {
+    font-style: normal;
+    font-size: 1.1rem;
+}
+
+.tab-btn:hover {
+    color: #ffb3df;
+    background: rgba(255, 80, 160, 0.1);
+}
+
+.tab-btn.active {
+    background: rgba(255, 70, 150, 0.2);
+    color: #ffbbee;
+    box-shadow: inset 0 0 0 1px rgba(255, 80, 160, 0.4), 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* контентна область */
+.content-area {
+    padding: 28px 28px 32px 28px;
+    min-height: 380px;
+}
+
+.tab-pane {
+    display: none;
+    animation: fade 0.2s ease;
+}
+
+.tab-pane.active-pane {
+    display: block;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.pane-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: #ff99dd;
+    letter-spacing: -0.3px;
+    border-left: 3px solid #ff66bb;
+    padding-left: 14px;
+}
+
+.pane-text {
+    line-height: 1.65;
+    color: #edd5f0;
+    font-size: 0.95rem;
+}
+
+.pane-text p {
+    margin: 12px 0;
+}
+
+.skills-list, .offers-list {
+    margin: 16px 0 0 20px;
+    list-style: none;
+}
+
+.skills-list li, .offers-list li {
+    margin: 10px 0;
+    position: relative;
+    padding-left: 20px;
+}
+
+.skills-list li::before, .offers-list li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #ff66bb;
+}
+
+.tech-stack {
+    background: rgba(255, 80, 160, 0.08);
+    padding: 14px 18px;
+    border-radius: 20px;
+    margin: 20px 0 0;
+    border: 1px solid rgba(255, 80, 160, 0.3);
+    font-size: 0.85rem;
+}
+
+.contact-btn {
+    display: inline-block;
+    background: linear-gradient(120deg, #ff3399, #cc0077);
+    padding: 10px 24px;
+    border-radius: 40px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 20px;
+    transition: 0.2s;
+    box-shadow: 0 2px 12px rgba(255, 50, 130, 0.4);
+}
+
+.contact-btn:hover {
+    transform: scale(0.97);
+    background: #ff44aa;
+    box-shadow: 0 0 12px #ff80bf;
+}
+
+hr {
+    border-color: rgba(255, 80, 160, 0.3);
+    margin: 14px 0;
+}
+
+.footer {
+    padding: 10px 24px;
+    font-size: 0.7rem;
+    border-top: 1px solid rgba(255, 80, 160, 0.2);
+    color: #aa88aa;
+    text-align: right;
+    background: rgba(0,0,0,0.3);
+}
+
+@media (max-width: 600px) {
+    .tabs {
+        padding: 12px 16px 0 16px;
+    }
+    .tab-btn {
+        padding: 6px 14px;
+        font-size: 0.8rem;
+    }
+    .content-area {
+        padding: 20px;
+    }
+    .pane-title {
+        font-size: 1.4rem;
+    }
+}
