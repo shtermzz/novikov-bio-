@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>novikov</title>
+    <!-- Подключение иконок Tabler Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <!-- Подключение CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Контейнер для фонового эффекта Ferrofluid -->
+    <div class="ferrofluid-background">
+        <div id="ferrofluid-root" style="width: 100%; height: 100%;"></div>
+    </div>
+
+    <!-- Основной контент поверх фона -->
+    <div class="wrap">
+        <div class="header">
+            <div class="name"><span>~/</span>novikov</div>
+            <div class="meta">
+                <span class="badge"><i class="ti ti-map-pin" style="font-size:11px;margin-right:3px"></i>Восточная Европа</span>
+                <span class="badge"><i class="ti ti-chart-candle" style="font-size:11px;margin-right:3px"></i>трейдинг</span>
+                <span class="badge"><i class="ti ti-code" style="font-size:11px;margin-right:3px"></i>программирование</span>
+                <span class="badge"><i class="ti ti-target" style="font-size:11px;margin-right:3px"></i>фин. независимость</span>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('bio',this)">BIO / whoami</button>
+            <button class="tab" onclick="switchTab('projects',this)">PROJECTS / skills</button>
+            <button class="tab" onclick="switchTab('buy',this)">BUY / offers</button>
+            <button class="tab" onclick="switchTab('contact',this)">CONTACT / social</button>
+        </div>
+
+        <div id="bio" class="panel active">
+            <div class="section-label">about me</div>
+            <div class="bio-text">
+                <p>Занимаюсь трейдингом и программированием. Анализирую финансовые рынки, создаю торговые стратегии. Разрабатываю веб-проекты и автоматизирую процессы.</p>
+                <p>Живу в Восточной Европе. Цель — финансовая независимость.</p>
+            </div>
+            <hr class="divider">
+            <div class="section-label">trading</div>
+            <div class="bio-text" style="font-size:13px;color:var(--text2)">Анализирую графики, паттерны, психологию торговли. Работаю с фьючерсами и крипторынком.</div>
+            <hr class="divider">
+            <div class="section-label">development</div>
+            <div class="bio-text" style="font-size:13px;color:var(--text2)">Разрабатываю веб-приложения, ботов, автоматизированные системы. Строю карьеру и инвестирую в будущее.</div>
+            <hr class="divider">
+            <div class="section-label">stack</div>
+            <div class="stack-grid">
+                <span class="tag">JS</span><span class="tag">Python</span><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Web3</span>
+            </div>
+        </div>
+
+        <div id="projects" class="panel">
+            <div class="section-label">projects</div>
+            <ul class="project-list">
+                <li class="project-item"><span class="dot"></span><span>Веб-платформа для аналитики крипторынка <span style="color:var(--text3);font-size:11px">(в разработке)</span></span></li>
+                <li class="project-item"><span class="dot"></span><span>Торговый бот для фьючерсов — Python + CCXT</span></li>
+                <li class="project-item"><span class="dot"></span><span>Telegram-бот для сигналов и управления портфелем</span></li>
+                <li class="project-item"><span class="dot"></span><span>Адаптивные веб-сайты</span></li>
+                <li class="project-item hl"><span class="dot"></span><span>Продам готового бота под dump/pump strategy</span></li>
+            </ul>
+            <hr class="divider">
+            <div class="section-label">tech stack</div>
+            <div class="stack-grid">
+                <span class="tag">JavaScript ES6+</span><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MongoDB</span><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Web3</span><span class="tag">Git</span><span class="tag">Docker</span>
+            </div>
+            <hr class="divider">
+            <div class="section-label">в планах</div>
+            <div class="plans">
+                <span class="plan-tag">Solidity</span><span class="plan-tag">AI-модели для трейдинга</span>
+            </div>
+        </div>
+
+        <div id="buy" class="panel">
+            <div class="section-label">принимаю в работу</div>
+            <div class="offer-card">
+                <div class="offer-title"><i class="ti ti-building-bank" style="font-size:14px"></i>Аккаунты криптобирж</div>
+                <div class="offer-desc">Скупаю аккаунты MEXC с отрицательным PNL. Условия обсуждаемы.</div>
+            </div>
+            <div class="offer-card">
+                <div class="offer-title"><i class="ti ti-affiliate" style="font-size:14px"></i>Партнёрские программы / арбитраж трафика</div>
+                <div class="offer-desc">Сотрудничество в сфере crypto. Рассмотрю офферы.</div>
+            </div>
+            <div class="offer-card">
+                <div class="offer-title"><i class="ti ti-robot" style="font-size:14px"></i>Разработка ботов на заказ</div>
+                <div class="offer-desc">Торговые боты, Telegram-боты, автоматизация. Под ваши требования.</div>
+            </div>
+            <hr class="divider">
+            <div class="section-label">оплата</div>
+            <div style="display:flex;gap:7px;flex-wrap:wrap">
+                <span class="tag">USDT</span><span class="tag">BTC</span><span class="tag" style="color:var(--text3);font-style:italic">офферы принимаются</span>
+            </div>
+            <hr class="divider">
+            <div style="font-size:12px;color:var(--text2)">Связь: <a href="https://t.me/qmrkm">@qmrkm</a> в Telegram</div>
+        </div>
+
+        <div id="contact" class="panel">
+            <div class="section-label">контакты</div>
+            <div class="contact-block">
+                <div class="contact-handle">@qmrkm</div>
+                <div class="contact-sub">Telegram · ответ в течение 12 часов<br>доступен 24/7</div>
+                <a href="https://t.me/qmrkm" class="tg-btn"><i class="ti ti-brand-telegram" style="font-size:16px"></i>Написать в Telegram</a>
+            </div>
+            <hr class="divider">
+            <div class="section-label">информация</div>
+            <div>
+                <div class="info-row"><span>имя</span><span>novikov</span></div>
+                <div class="info-row"><span>сфера</span><span>трейдинг, программирование</span></div>
+                <div class="info-row"><span>локация</span><span>Восточная Европа</span></div>
+                <div class="info-row"><span>цель</span><span>финансовая независимость</span></div>
+                <div class="info-row"><span>telegram</span><span><a href="https://t.me/qmrkm">@qmrkm</a></span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Реакт и зависимости -->
+    <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.development.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.development.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ogl@0.0.7/dist/ogl.umd.js"></script>
+    <!-- Компонент Ferrofluid -->
+    <script src="Ferrofluid.js"></script>
+    <!-- Основной скрипт -->
+    <script src="script.js"></script>
+    <script>
+        // Рендерим Ferrofluid после загрузки всех зависимостей
+        document.addEventListener('DOMContentLoaded', function() {
+            const rootElement = document.getElementById('ferrofluid-root');
+            if (rootElement && window.Ferrofluid && window.React && window.ReactDOM) {
+                try {
+                    const FerrofluidComponent = window.Ferrofluid.default || window.Ferrofluid;
+                    const root = ReactDOM.createRoot(rootElement);
+                    root.render(
+                        React.createElement(FerrofluidComponent, {
+                            colors: ['#4F46E5', '#06B6D4', '#E0F2FE', '#7C3AED', '#2DD4BF'],
+                            speed: 0.5,
+                            scale: 1.2,
+                            turbulence: 1.2,
+                            fluidity: 0.15,
+                            rimWidth: 0.25,
+                            sharpness: 2.5,
+                            shimmer: 1.2,
+                            glow: 1.8,
+                            flowDirection: 'down',
+                            opacity: 0.85,
+                            mouseInteraction: true,
+                            mouseStrength: 0.8,
+                            mouseRadius: 0.4,
+                            mouseDampening: 0.12
+                        })
+                    );
+                } catch(e) {
+                    console.error('Ferrofluid render error:', e);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
